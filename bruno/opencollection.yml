@@ -1,0 +1,28 @@
+opencollection: 1.0.0
+
+info:
+  name: gRPC-Spring
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  variables:
+    - name: host
+      value: http://localhost:8080
+    - name: grpc
+      value: http://localhost:9090
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

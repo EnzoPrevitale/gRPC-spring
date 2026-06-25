@@ -1,0 +1,11 @@
+info:
+  name: Test
+  type: grpc
+  seq: 2
+
+grpc:
+  url: "{{grpc}}/"
+  method: /Greeter/SayHello
+  methodType: unary
+  message: "{}"
+  auth: inherit

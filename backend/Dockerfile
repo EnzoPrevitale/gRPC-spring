@@ -1,4 +1,4 @@
-FROM gradle:jdk21-alpine AS builder
+FROM gradle:9.6.0-jdk21-alpine AS builder
 
 WORKDIR /app
 
@@ -8,9 +8,9 @@ RUN gradle dependencies --no-daemon
 
 COPY src ./src
 
-RUN gradle build -x test --no-daemon
+RUN gradle build -x test --no-daemon --warning-mode all
 
-FROM gradle:jdk21-alpine AS final
+FROM gradle:9.6.0-jdk21-alpine AS final
 
 WORKDIR /app
 
