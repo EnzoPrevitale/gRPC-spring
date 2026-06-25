@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.grpc.client.ImportGrpcClients;
 
 @SpringBootApplication
-@ImportGrpcClients()
+@ImportGrpcClients(types = GreeterGrpc.GreeterBlockingStub.class)
 public class GRpcSpringApplication {
 
     public static void main(String[] args) {

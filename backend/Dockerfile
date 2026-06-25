@@ -1,4 +1,4 @@
-FROM gradle:8.14.3-jdk17 AS builder
+FROM gradle:jdk21-alpine AS builder
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ COPY src ./src
 
 RUN gradle build -x test --no-daemon
 
-FROM eclipse-temurin:17-jre-jammy AS final
+FROM gradle:jdk21-alpine AS final
 
 WORKDIR /app
 
