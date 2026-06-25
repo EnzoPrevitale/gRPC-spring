@@ -1,0 +1,14 @@
+info:
+  name: Messager
+  type: grpc
+  seq: 3
+
+grpc:
+  url: "{{grpc}}/"
+  method: /Messager/sendMessage
+  methodType: bidi-streaming
+  message: |-
+    {
+      "message": "aaaa"
+    }
+  auth: inherit
