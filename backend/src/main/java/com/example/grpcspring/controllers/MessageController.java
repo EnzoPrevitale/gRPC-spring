@@ -1,7 +1,6 @@
 package com.example.grpcspring.controllers;
 
 import com.example.grpcspring.client.MessagerClient;
-import com.example.grpcspring.dtos.MessageDto;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
@@ -23,7 +22,7 @@ public class MessageController {
     }
 
     @PostMapping("/send")
-    public void sendMessage(@RequestBody MessageDto dto) {
-        client.sendMessage(dto.message());
+    public void sendMessage(@RequestBody String message) {
+        client.sendMessage(message);
     }
 }
