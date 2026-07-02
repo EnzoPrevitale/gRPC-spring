@@ -5,7 +5,7 @@ option java_package = "com.example.grpcspring";
 option java_outer_classname = "MessagerProto";
 
 service Messager {
-  rpc sendMessage (stream MessageRequest) returns (stream MessageResponse);
+  rpc SendMessage (stream MessageRequest) returns (stream MessageResponse);
 }
 
 message MessageRequest {

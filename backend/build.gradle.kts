@@ -32,6 +32,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.boot:spring-boot-starter-webmvc")
 
+    implementation("org.springframework.boot:spring-boot-starter-webflux")
+
     // --- gRPC starters (groupId added!) ---
     implementation("org.springframework.boot:spring-boot-starter-grpc-server")
     implementation("org.springframework.boot:spring-boot-starter-grpc-client")
@@ -63,6 +65,7 @@ protobuf {
         artifact = "com.google.protobuf:protoc:${property("protobufVersion")}"
     }
     plugins {
+
     }
 }
 

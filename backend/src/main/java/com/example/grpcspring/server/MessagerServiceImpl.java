@@ -15,7 +15,7 @@ public class MessagerServiceImpl extends MessagerGrpc.MessagerImplBase {
             @Override
             public void onNext(MessageRequest messageRequest) {
                 MessageResponse response = MessageResponse.newBuilder()
-                        .setMessage("Recebido: " + messageRequest.getMessage())
+                        .setMessage(messageRequest.getMessage())
                         .build();
                 responseObserver.onNext(response);
             }
